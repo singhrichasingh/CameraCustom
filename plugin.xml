@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-cameracustom" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<name>CameraCustom</name>
+<js-module name="CameraCustom" src="www/CameraCustom.js">
+<clobbers target="CameraCustom" />
+</js-module>
+<platform name="android">
+<config-file parent="/*" target="res/xml/config.xml">
+<feature name="CameraCustom">
+<param name="android-package" value="cordova.plugin.cameracustom.CameraCustom" />
+ <param name="onload" value="true" />
+</feature>
+</config-file>
+<config-file parent="/*" target="AndroidManifest.xml">
+</config-file>
+<source-file src="src/android/CameraCustom.java" target-dir="src/cordova-plugin-cameracustom/CameraCustom" />
+        <framework src="src/android/cameracustom.gradle" custom="true" type="gradleReference"/>
+        <resource-file src="src/android/libs/3.0.0/armeabi/libTuyaSmartLink.so" target="jniLibs/armeabi/libTuyaSmartLink.so"/>
+        <resource-file src="src/android/libs/3.0.0/arm64-v8a/libTuyaSmartLink.so" target="jniLibs/arm64-v8a/libTuyaSmartLink.so"/>
+        <resource-file src="src/android/libs/3.0.0/armeabi-v7a/libTuyaSmartLink.so" target="jniLibs/armeabi-v7a/libTuyaSmartLink.so"/>
+         <!-- <resource-file src="src/android/libs/3.0.0/armeabi-v7a/libTuyaSmartLink.so" target="jniLibs/armeabi-v7a/libTuyaSmartLink.so"/>
+          <resource-file src="src/android/libs/3.0.0/armeabi-v7a/libTuyaSmartLink.so" target="jniLibs/armeabi-v7a/libTuyaSmartLink.so"/>
+           <resource-file src="src/android/libs/3.0.0/armeabi-v7a/libTuyaSmartLink.so" target="jniLibs/armeabi-v7a/libTuyaSmartLink.so"/>
+            <resource-file src="src/android/libs/3.0.0/armeabi-v7a/libTuyaSmartLink.so" target="jniLibs/armeabi-v7a/libTuyaSmartLink.so"/>
+             <resource-file src="src/android/libs/3.0.0/armeabi-v7a/libTuyaSmartLink.so" target="jniLibs/armeabi-v7a/libTuyaSmartLink.so"/> -->
+        <!-- <lib-file src="src/android/libs/3.0.0/armeabi/libTuyaSmartLink.so"/>
+        <lib-file src="src/android/libs/3.0.0/arm64-v8a/libTuyaSmartLink.so"/> -->
+         <lib-file src="src/android/libs/3.0.0/armeabi-v7a/libTuyaSmartLink.so"/>
+          <lib-file src="src/android/libs/3.0.0/armeabi-v7a/libc++_shared.so"/>
+           <lib-file src="src/android/libs/3.0.0/armeabi-v7a/libjnimain.so"/>
+            <lib-file src="src/android/libs/3.0.0/armeabi-v7a/libnetwork-android.so"/>
+             <lib-file src="src/android/libs/3.0.0/armeabi-v7a/libtuyammkv.so"/>
+</platform>
+</plugin>

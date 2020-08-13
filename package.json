@@ -1,0 +1,25 @@
+{
+  "name": "cameracustom",
+  "version": "1.0.0",
+  "description": "Camera Custom plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo Error: no test specified && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singhrichasingh/CameraCustom.git"
+  },
+  "keywords": [
+     "custom",
+    "seamoon",
+    "lib",
+    "plugin"
+  ],
+  "author": "Richa Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/singhrichasingh/CameraCustom/issues"
+  },
+  "homepage": "https://github.com/singhrichasingh/CameraCustom#readme"
+}
