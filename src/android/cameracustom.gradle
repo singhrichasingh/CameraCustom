@@ -15,20 +15,23 @@ dependencies {
           compile(name:'libnetwork-android', ext:'so')
             compile(name:'libtuyammkv', ext:'so')
     //implementation 'com.inuker.cameracustom:library:1.4.0'
-     implementation 'com.alibaba:fastjson:1.1.67.android'
-    implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.12.3'
-    implementation 'com.tuya.smart:tuyasmart:3.9.6'
-  //  implementation 'com.tuya.smart:tuyacamera:3.0.3'
-    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
+    //  implementation 'com.alibaba:fastjson:1.1.67.android'
+    // implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.12.3'
+    // implementation 'com.tuya.smart:tuyasmart:3.9.6'
+    // implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
+    //implementation 'com.tuya.smart:tuyasmart-ipc-camera-middleware:3.14.3r133'
+    //implementation 'com.tuya.smart:tuyasmart-ipc-camera-middleware:3.17.0r139h1'
 }
 
 android {
     defaultConfig {
     ndk {
-        abiFilters "armeabi-v7a","arm-87a"
+        abiFilters "armeabi-v7a","arm-87a","arm64-v8a"
     }
 }
     packagingOptions {
+        pickFirst 'lib/*/libc++_shared.so'
+       pickFirst 'lib/*/libgnustl_shared.so'
         exclude 'META-INF/NOTICE'
         exclude 'META-INF/LICENSE'
     }
