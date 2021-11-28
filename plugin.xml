@@ -14,10 +14,48 @@
 <config-file parent="/*" target="AndroidManifest.xml">
 </config-file>
 <source-file src="src/android/CameraCustom.java" target-dir="src/cordova/plugin/cameracustom/CustomCustom" />
+<source-file src="src/android/NewActivity.java" target-dir="src/cordova/plugin/cameracustom/CustomCustom" />
+<source-file src="src/android/PlaybackPanel.java" target-dir="src/cordova/plugin/cameracustom/CustomCustom" />
+<source-file src="src/android/PlaybackTime.java" target-dir="src/cordova/plugin/cameracustom/CustomCustom" />
+<source-file src="src/android/Setting.java" target-dir="src/cordova/plugin/cameracustom/CustomCustom" />
+<source-file src="src/android/MessagePanel.java" target-dir="src/cordova/plugin/cameracustom/CustomCustom" />
+<source-file src="src/android/AlarmDetectionAdapter.java" target-dir="src/cordova/plugin/cameracustom/CustomCustom" />
+<source-file src="src/android/CameraCloud.java" target-dir="src/cordova/plugin/cameracustom/CustomCustom" />
+<source-file src="src/android/CameraVideoActivity.java" target-dir="src/cordova/plugin/cameracustom/CustomCustom" />
+<source-file src="src/android/DateUtils.java" target-dir="src/cordova/plugin/cameracustom/CustomCustom" />
+<source-file src="src/android/LockFunctions.java" target-dir="src/cordova/plugin/cameracustom/CustomCustom" />
+<source-file src="src/android/QrCodeGen.java" target-dir="src/cordova/plugin/cameracustom/CustomCustom" />
+<source-file src="src/android/QRCodeUtil.java" target-dir="src/cordova/plugin/cameracustom/CustomCustom" />
+<source-file src="src/android/RecordInfoBean.java" target-dir="src/cordova/plugin/cameracustom/CustomCustom" />
+<source-file src="src/android/TimePieceBean.java" target-dir="src/cordova/plugin/cameracustom/CustomCustom" />
+<source-file src="src/android/TimeZoneUtils.java" target-dir="src/cordova/plugin/cameracustom/CustomCustom" />
+
+<source-file src="res/layout/camera_panel.xml" target-dir="res/layout"/>
+<source-file src="res/layout/camera_control.xml" target-dir="res/layout"/>
+<source-file src="res/layout/activity_camera_message.xml" target-dir="res/layout"/>
+<source-file src="res/layout/activity_camera_playback.xml" target-dir="res/layout"/>
+<source-file src="res/layout/activity_camera_playback_time.xml" target-dir="res/layout"/>
+<source-file src="res/layout/activity_camera_setting.xml" target-dir="res/layout"/>
+<source-file src="res/layout/camera_cloud_video.xml" target-dir="res/layout"/>
+<source-file src="res/layout/camera_cloud.xml" target-dir="res/layout"/>
+<source-file src="res/layout/camera_ui_message.xml" target-dir="res/layout"/>
+<source-file src="res/layout/qr_code.xml" target-dir="res/layout"/>
+<source-file src="res/layout/toolbar_view.xml" target-dir="res/layout"/>
+
         <framework src="src/android/cameracustom.gradle" custom="true" type="gradleReference"/>
-        <resource-file src="src/android/libs/3.0.0/armeabi/libTuyaSmartLink.so" target="jniLibs/armeabi/libTuyaSmartLink.so"/>
+
+        <!-- <resource-file src="src/android/libs/3.0.0/armeabi/libTuyaSmartLink.so" target="jniLibs/armeabi/libTuyaSmartLink.so"/>
         <resource-file src="src/android/libs/3.0.0/arm64-v8a/libTuyaSmartLink.so" target="jniLibs/arm64-v8a/libTuyaSmartLink.so"/>
-        <resource-file src="src/android/libs/3.0.0/armeabi-v7a/libTuyaSmartLink.so" target="jniLibs/armeabi-v7a/libTuyaSmartLink.so"/>
+        <resource-file src="src/android/libs/3.0.0/armeabi-v7a/libTuyaSmartLink.so" target="jniLibs/armeabi-v7a/libTuyaSmartLink.so"/> -->
+
+        <resource-file src="src/android/libc++_shared.so" target="jniLibs/libc++_shared.so"/>
+        <resource-file src="src/android/libjnimain.so" target="jniLibs/libjnimain.so"/>
+        <resource-file src="src/android/libnetwork-android.so" target="jniLibs/libnetwork-android.so"/>
+        <resource-file src="src/android/libtuyammkv.so" target="jniLibs/libtuyammkv.so"/>
+        <resource-file src="src/android/libTuyaSmartLink.so" target="jniLibs/libTuyaSmartLink.so"/>
+        <resource-file src="src/android/libBleLib.so" target="jniLibs/libBleLib.so"/>
+        <resource-file src="src/android/libcloudsignature-lib.so" target="jniLibs/libcloudsignature-lib.so"/>
+       
          <!-- <resource-file src="src/android/libs/3.0.0/armeabi-v7a/libTuyaSmartLink.so" target="jniLibs/armeabi-v7a/libTuyaSmartLink.so"/>
           <resource-file src="src/android/libs/3.0.0/armeabi-v7a/libTuyaSmartLink.so" target="jniLibs/armeabi-v7a/libTuyaSmartLink.so"/>
            <resource-file src="src/android/libs/3.0.0/armeabi-v7a/libTuyaSmartLink.so" target="jniLibs/armeabi-v7a/libTuyaSmartLink.so"/>
@@ -25,10 +63,15 @@
              <resource-file src="src/android/libs/3.0.0/armeabi-v7a/libTuyaSmartLink.so" target="jniLibs/armeabi-v7a/libTuyaSmartLink.so"/> -->
         <!-- <lib-file src="src/android/libs/3.0.0/armeabi/libTuyaSmartLink.so"/>
         <lib-file src="src/android/libs/3.0.0/arm64-v8a/libTuyaSmartLink.so"/> -->
-         <lib-file src="src/android/libs/3.0.0/armeabi-v7a/libTuyaSmartLink.so"/>
-          <lib-file src="src/android/libs/3.0.0/armeabi-v7a/libc++_shared.so"/>
-           <lib-file src="src/android/libs/3.0.0/armeabi-v7a/libjnimain.so"/>
-            <lib-file src="src/android/libs/3.0.0/armeabi-v7a/libnetwork-android.so"/>
-             <lib-file src="src/android/libs/3.0.0/armeabi-v7a/libtuyammkv.so"/>
+         
+         <!-- <lib-file src="src/android/libs/3.0.0/armeabi-v7a/libTuyaSmartLink.so"/> -->
+          
+          <lib-file src="src/android/libc++_shared.so"/>
+           <lib-file src="src/android/libjnimain.so"/>
+            <lib-file src="src/android/libnetwork-android.so"/>
+             <lib-file src="src/android/libtuyammkv.so"/>
+             <lib-file src="src/android/libTuyaSmartLink.so"/>
+             <lib-file src="src/android/libBleLib.so"/>
+             <lib-file src="src/android/libcloudsignature-lib.so"/>
 </platform>
 </plugin>
